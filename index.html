@@ -5,19 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
   <style>
-    .background {
-      left:0px;
-      top:0px;
-      width: 100vh;
-      height: 100vw;
-      background: linear-gradient(45deg, #30098b, #1b1a1a, #094491);
-      background-size: 200% 200%;
-      animation: gradientBG 10s ease infinite;
+   body {
+      margin: 0;
+      padding: 0;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(45deg, #30098b, #1b1a1a, #094491);
+      background-size: 200% 200%;
+      animation: gradientBG 10s ease infinite;
+      z-index: -1;
     }
 
     @keyframes gradientBG {
@@ -79,7 +86,7 @@
 </head>
 
 <body>
-  <div class="background">
+
   <div id="container">
     <div class="gif-image"></div>
     <img width="100px" height="100px" src="Tak berjudul33_20231031183049.png" style="display: block; margin: 20px auto;">
@@ -88,7 +95,7 @@
       <button>Unduh Data</button>
     </a>
   </div>
-</div>
+
 </body>
 
 </html>
